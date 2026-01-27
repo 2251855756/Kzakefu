@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "set NODE_ENV=dev&&node src/server.js",
-    "prod": "set NODE_ENV=prod&&nodemon src/server.js"
+    "dev": "set NODE_ENV=dev&&nodemon src/server.js",
+    "prod": "set NODE_ENV=prod&&node src/server.js"
   },
   "repository": {
     "type": "git",

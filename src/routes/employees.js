@@ -92,6 +92,7 @@ router.put('/:id', async (req, res, next) => {
 });
 
 /* Delete a specific employee */
+// /655afa8196943302b03283bd
 router.delete('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
