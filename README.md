@@ -53,3 +53,11 @@ npm run prod
 For more details check [Build a Restful CRUD API with Node.js](https://dev.to/zagaris/build-a-restful-crud-api-with-node-js-2334).
 
 
+更新后的接口：
+获取所有员工：GET http://localhost:8080/api/employees
+根据姓名查员工：GET http://localhost:8080/api/employees/username/张三
+根据 ID 查员工：GET http://localhost:8080/api/employees/id/655afa8196943302b03283bd
+获取所有职位：GET http://localhost:8080/api/employees/jobs
+ID 范围查询：GET http://localhost:8080/api/employees/range?minId=655afa8196943302b03283bd&maxId=655afa8196943302b03283bf
+
+
