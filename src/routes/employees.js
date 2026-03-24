@@ -1,7 +1,7 @@
 const express = require('express');
+const monk = require('monk');
 const schema = require('../db/schema');
 const db = require('../db/connection');
-const monk = require('monk');
 
 const router = express.Router();
 const employees = db.get('employees');
@@ -78,8 +78,8 @@ router.get('/range', async (req, res, next) => {
     const list = await employees.find({
       _id: {
         $gte: monk.id(minId),
-        $lte: monk.id(maxId)
-      }
+        $lte: monk.id(maxId),
+      },
     });
 
     res.json(list);
