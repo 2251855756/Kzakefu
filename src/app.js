@@ -10,7 +10,7 @@ const { notFound, errorHandler } = require('./middlewares');
 const requestTimestamp = require('./middlewares/requestTimestamp');
 
 const app = express();
- 
+
 app.use(helmet());
 // 挂载时间戳中间件（所有请求都会添加响应头）
 app.use(requestTimestamp);
@@ -18,7 +18,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 const employees = require('./routes/employees');
+const user = require('./routes/user');
 
+app.use('/api/user', user);
 app.use('/api/employees', employees);
 
 app.use(notFound);
